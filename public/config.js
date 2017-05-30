@@ -1,0 +1,18 @@
+(function(){
+  'use strict';
+  const app = angular.module('list', ['ui.router']);
+
+  app.config(config)
+  config.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider'];
+
+  function config($stateProvider, $urlRouterProvider, $locationProvider){
+    // $urlRouterProvider.otherwise('/')
+    $locationProvider.html5Mode(true)
+    $stateProvider
+    .state({
+      name: 'home',
+      url: '/',
+      component:'main'
+    })  
+  }
+}())
