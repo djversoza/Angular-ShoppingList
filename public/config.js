@@ -13,6 +13,11 @@
       name: 'home',
       url: '/',
       component:'main'
-    })  
+    })
+    .state({
+      name: 'addList',
+      url: '/NewList',
+      component: 'addList'
+    })
   }
 }())

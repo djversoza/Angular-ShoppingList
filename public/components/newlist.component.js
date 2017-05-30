@@ -1,15 +1,15 @@
 (function(){
   'use strict'
   angular.module('list')
-  .component('main',{
-  templateUrl: 'components/mainComp.html',
+  .component('addList',{
+  templateUrl: 'components/newList.html',
   controller: controller,
   controllerAs: 'vm'
 })
 
 function controller(){
   const vm = this;
-  
+
 
 }
 }());
