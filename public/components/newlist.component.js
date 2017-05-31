@@ -7,9 +7,11 @@
   controllerAs: 'vm'
 })
 
-function controller(){
+controller.inject = ['$http']
+
+function controller($http){
   const vm = this;
 
-
+  // $http.get('/api/posts')
 }
 }());

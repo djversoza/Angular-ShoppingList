@@ -7,9 +7,15 @@
   controllerAs: 'vm'
 })
 
-function controller(){
-  const vm = this;
-  
+controller.inject = ['$http']
 
+function controller($http){
+  const vm = this;
+vm.$onInit = function () {
+ $http.get('/api/posts').then(res =>{
+    vm.posts = res.data
+    console.log(vm.posts)
+  })
+}
 }
 }());

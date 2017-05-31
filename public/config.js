@@ -6,8 +6,8 @@
   config.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider'];
 
   function config($stateProvider, $urlRouterProvider, $locationProvider){
-    // $urlRouterProvider.otherwise('/')
-    $locationProvider.html5Mode(true)
+    $urlRouterProvider.otherwise('/')
+
     $stateProvider
     .state({
       name: 'home',

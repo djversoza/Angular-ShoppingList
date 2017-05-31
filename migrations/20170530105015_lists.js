@@ -3,7 +3,7 @@ exports.up = function(knex, Promise) {
   return knex.schema.createTable('posts', (t)=>{
     t.increments('id');
     t.integer('poster_id');
-    t.text('list-title');
+    t.text('list_title');
   })
 };
 
