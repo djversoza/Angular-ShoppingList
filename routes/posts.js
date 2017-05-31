@@ -4,10 +4,17 @@ const knex = require('../db/knex')
 
 router.get('/', (req, res, next) =>{
   knex.raw('SELECT * FROM posts').then(data =>{
-     res.send(data.rows)
+    knex.raw('SELECT * FROM list_item').then(data2 =>{
+      res.send({data: data.rows, data2: data2.rows})
+    })
   })
-  console.log('here in newlist')
-})
+});
+
+router.post('/NewList', (req, res, next) =>{
+    console.log(req.body)
+  })
+
+
 
 
 

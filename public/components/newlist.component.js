@@ -12,6 +12,10 @@ controller.inject = ['$http']
 function controller($http){
   const vm = this;
 
-  // $http.get('/api/posts')
+
+
+  vm.addItem = function() {
+    $http.post('/api/posts/NewList', vm.newList)
+  }
 }
 }());

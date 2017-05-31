@@ -11,11 +11,12 @@ controller.inject = ['$http']
 
 function controller($http){
   const vm = this;
-vm.$onInit = function () {
- $http.get('/api/posts').then(res =>{
-    vm.posts = res.data
-    console.log(vm.posts)
-  })
-}
+  vm.$onInit = function () {
+   $http.get('/api/posts').then(res =>{
+      console.log(res.data.data)
+      vm.posts = res.data.data
+      vm.list_items = res.data.data2
+    })
+  }
 }
 }());

@@ -1,3 +1,6 @@
 <form>
-  <input type="text" />
+  <input ng-model="vm.newList.list_title" type="text" />
+  <input ng-model="vm.newItem.item" type="text" />
+  <input ng-model="vm.newItem.quantity" type="text" />
+  <button ng-click="vm.addItem()" type="submit"></button>
 </form>

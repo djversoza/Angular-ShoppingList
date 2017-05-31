@@ -1,11 +1,14 @@
 
 <div class="container">
-  <div class="row">
+  <div ng-repeat="post in vm.posts" class="row">
     <div class="col-xs-8 col-xs-offset-2">
-
-
         <div class="jumbotron">
-          yo
+          {{post.list_title}}
+          <div ng-repeat="item in vm.list_items">
+            <span ng-if="post.id === item.post_id">
+              {{item.item}}
+            </span>
+          </div>
           <button ui-sref="addList"></button>
         </div>
 
